@@ -119,10 +119,15 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 ![alt text][image7]
 
 I also crop the images in order to make the training faster. 
+Original image taken from the simulator
+
+![img](img/original-image.jpg)
+
+Cropped image after passing through a Cropping2D layer
+![img](img/cropped-image.jpg)
 
 After the collection process, I had X number of data points. I then preprocessed this data by ...
-![img](img/original-image.jpg)
-![img](img/cropped-image.jpg)
+
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
