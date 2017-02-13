@@ -34,8 +34,6 @@ The original architecture is shown in the following figure.
 
 ![img](img/cnn_nvidia.png)
 
-
-
 I made a little change to the original Nvidia CNN. I add a cropping layer after the normalization layer. 
 The network consists of 10 layers, including a normalization layer, a cropping layer, 5 convolutional layers and 3 fully connected layers.  (model.py line 60-72).
 
@@ -103,31 +101,28 @@ model.add(Dense(10))
 model.add(Dense(1))
 ```
 
-
-
 ####3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I first recorded more than one laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image2]
+![img](img/original-image.png)
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to go back to the center of the road from the edges of the road. These images show what a recovery looks like starting from ... :
 
 ![alt text][image3]
 ![alt text][image4]
 ![alt text][image5]
-
-Then I repeated this process on track two in order to get more data points.
 
 To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
 
 ![alt text][image6]
 ![alt text][image7]
 
-Etc ....
+I also crop the images in order to make the training faster. 
 
 After the collection process, I had X number of data points. I then preprocessed this data by ...
-
+![img](img/original-image.png)
+![img](img/cropped-image.png)
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
