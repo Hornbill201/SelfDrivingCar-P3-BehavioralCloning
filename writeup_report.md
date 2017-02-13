@@ -107,23 +107,23 @@ To capture good driving behavior, I first recorded more than one laps on track o
 
 ![img](img/original-image.jpg)
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to go back to the center of the road from the edges of the road. These images show what a recovery looks like starting from ... :
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to go back to the center of the road from the edges of the road. The following image shows the recovery from the right edge to the center:
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+![img](img/recovery.png)
 
 To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
 
-![alt text][image6]
-![alt text][image7]
+![img](img/left_turn.png)
+![img](img/right_turn.png)
 
 I also crop the images in order to make the training faster. 
+
 Original image taken from the simulator
 
 ![img](img/original-image.jpg)
 
 Cropped image after passing through a Cropping2D layer
+
 ![img](img/cropped-image.jpg)
 
 After the collection process, I had X number of data points. I then preprocessed this data by ...
