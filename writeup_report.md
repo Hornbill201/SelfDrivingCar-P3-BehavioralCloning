@@ -32,9 +32,25 @@ The model.py file contains the code for training and saving the convolution neur
 
 ####1. An appropriate model arcthiecture has been employed
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 (model.py lines 18-24) 
+The final network is borrowed from Nvidia's CNN for Self-driving car, which can be found at
+https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf
+The original architecture is shown in the following figure. 
 
-The model includes RELU layers to introduce nonlinearity (code line 20), and the data is normalized in the model using a Keras lambda layer (code line 18). 
+The network consists of 9 layers, including a normalization layer, 5 convolutional layers
+and 3 fully connected layers. 
+
+The first layer of the network performs image normalization. The normalizer is hard-coded and is not
+adjusted in the learning process. Performing normalization in the network allows the normalization
+scheme to be altered with the network architecture and to be accelerated via GPU processing.
+The convolutional layers were designed to perform feature extraction and were chosen empirically
+through a series of experiments that varied layer configurations. We use strided convolutions in the
+first three convolutional layers with a 2×2 stride and a 5×5 kernel and a non-strided convolution
+with a 3×3 kernel size in the last two convolutional layers.
+We follow the five convolutional layers with three fully connected layers leading to an output control
+value which is the inverse turning radius. The fully connected layers are designed to function as a
+controller for steering, but we note that by training the system end-to-end, it is not possible to make
+a clean break between which parts of the network function primarily as feature extractor and which
+serve as controller.
 
 ####2. Attempts to reduce overfitting in the model
 
@@ -102,6 +118,6 @@ Etc ....
 After the collection process, I had X number of data points. I then preprocessed this data by ...
 
 
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
