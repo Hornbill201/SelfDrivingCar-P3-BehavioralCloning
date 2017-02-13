@@ -32,6 +32,10 @@ The model.py file contains the code for training and saving the convolution neur
 The final network is borrowed from Nvidia's CNN for Self-driving car. ([Click for details.](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf "Click for details."))
 The original architecture is shown in the following figure. 
 
+![alt text][img/cnn_nvidia.png]
+
+
+
 I made a little change to the original Nvidia CNN. I add a cropping layer after the normalization layer. 
 The network consists of 10 layers, including a normalization layer, a cropping layer, 5 convolutional layers and 3 fully connected layers.  (model.py line 60-72).
 
