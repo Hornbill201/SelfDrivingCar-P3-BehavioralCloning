@@ -32,7 +32,7 @@ The model.py file contains the code for training and saving the convolution neur
 The final network is borrowed from Nvidia's CNN for Self-driving car. ([Click for details.](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf "Click for details."))
 The original architecture is shown in the following figure. 
 
-![alt text][img/cnn_nvidia.png]
+![img](img/cnn_nvidia.png)
 
 
 
