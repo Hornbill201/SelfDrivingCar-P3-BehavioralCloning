@@ -105,7 +105,7 @@ model.add(Dense(1))
 
 To capture good driving behavior, I first recorded more than one laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![img](img/original-image.png)
+![img](img/original-image.jpg)
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to go back to the center of the road from the edges of the road. These images show what a recovery looks like starting from ... :
 
@@ -121,8 +121,8 @@ To augment the data sat, I also flipped images and angles thinking that this wou
 I also crop the images in order to make the training faster. 
 
 After the collection process, I had X number of data points. I then preprocessed this data by ...
-![img](img/original-image.png)
-![img](img/cropped-image.png)
+![img](img/original-image.jpg)
+![img](img/cropped-image.jpg)
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
