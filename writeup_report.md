@@ -111,7 +111,7 @@ I then recorded the vehicle recovering from the left side and right sides of the
 
 ![img](img/recovery.png)
 
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
+To augment the data sat, I also flipped images and angles thinking that this would solve the left turn bias problem. For example, here is an image that has then been flipped:
 
 ![img](img/left_turn.jpg)
 ![img](img/right_turn.jpg)
@@ -126,9 +126,12 @@ Cropped image after passing through a Cropping2D layer
 
 ![img](img/cropped-image.jpg)
 
-After the collection process, I had X number of data points. I then preprocessed this data by ...
+I also use multiple cameras inputs in this project.  When recording, the simulator will simultaneously save an image for the left, center and right cameras. Each row of the csv log file, driving_log.csv, contains the file path for each camera. In this case, we can teach our model how to steer if the car drifts off to the left or the right.
 
+![img](img/mutliple-cameras.jpg)
 
-I finally randomly shuffled the data set and put 20% of the data into a validation set. 
+After the collection process, I had 25056 number of data points. 
 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5 as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I finally randomly shuffled the data set and put 20% of the data into a validation set. (model.py line 77)
+
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 5, since after 5 epoches, the validation error will never decrease. The batch size I choose is 128. I used an adam optimizer so that manually training the learning rate wasn't necessary.
