@@ -128,6 +128,8 @@ Cropped image after passing through a Cropping2D layer
 
 I also use multiple cameras inputs in this project.  When recording, the simulator will simultaneously save an image for the left, center and right cameras. Each row of the csv log file, driving_log.csv, contains the file path for each camera. In this case, we can teach our model how to steer if the car drifts off to the left or the right.
 
+Output of the left, center and right cameras
+
 ![img](img/mutliple-cameras.jpg)
 
 After the collection process, I had 25056 number of data points. 
