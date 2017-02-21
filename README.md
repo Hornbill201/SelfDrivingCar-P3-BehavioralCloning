@@ -1,7 +1,7 @@
-#**Behavioral Cloning Writeup** 
+#**Behavioral Cloning** 
 
 
-**Behavrioal Cloning Project**
+**Udacity CarND Term1 Project 3 Behavrioal Cloning**
 
 The goals / steps of this project are the following:
 * Use the simulator to collect data of good driving behavior
@@ -23,7 +23,7 @@ Using the Udacity provided simulator and my drive.py file, the car can be driven
 python drive.py model.h5
 ```
 
-Here's a [link to my final video result on YouTube.](https://youtu.be/iEKQp3lVPaA)
+### Here's a [link to my final video result on YouTube.](https://youtu.be/iEKQp3lVPaA)
 
 
 
